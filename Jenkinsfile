@@ -1,6 +1,6 @@
 pipeline {
     agent { docker 'node:6.3' }
-     environment{JIRA_ISSUE_STATUS=	credentials('JIRA_ISSUE_STATUS')}
+    environment{ JIRA_ISSUE_STATUS = "${env.JIRA_ISSUE_STATUS}") }
     stages {
         stage('build') {
             steps {
