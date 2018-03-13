@@ -9,6 +9,7 @@ pipeline {
         stage('test'){
             steps{
                 echo 'Testing'
+                echo '现在的状态是 ${JIRA_ISSUE_STATUS}'
             }
         }
         stage('deploy'){
